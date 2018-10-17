@@ -1,0 +1,20 @@
+jobs:
+- job: ${{ parameters.name }}
+  pool:
+    vmImage: ${{ parameters.vmImage }}
+  strategy:
+    matrix:
+      Python27:
+        PYTHON_VERSION: '2.7'
+      Python34:
+        PYTHON_VERSION: '3.4'    
+      Python35:
+        PYTHON_VERSION: '3.5'
+      Python36:
+        PYTHON_VERSION: '3.6'    
+  steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: $(PYTHON_VERSION)
+    displayName: 'Install Python'
+  - script: echo hello!
