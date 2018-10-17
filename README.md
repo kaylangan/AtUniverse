@@ -1,5 +1,4 @@
-
-
+[![Build Status](https://dev.azure.com/kangantest-demo1017/AtUniverse/_apis/build/status/kaylangan.AtUniverse?branchName=master&label=master)](https://dev.azure.com/kangantest-demo1017/AtUniverse/_build/latest?definitionId=1&branchName=master&label=master)
 
 # :rocket: Create your first pipeline
 
