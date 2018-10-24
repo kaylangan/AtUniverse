@@ -4,14 +4,24 @@ jobs:
     vmImage: ${{ parameters.vmImage }}
   strategy:
     matrix:
+      Python26:
+        PYTHON_VERSION: '2.6'    
       Python27:
         PYTHON_VERSION: '2.7'
+      Python32:
+        PYTHON_VERSION: '3.2'  
+      Python33:
+        PYTHON_VERSION: '3.3'          
       Python34:
         PYTHON_VERSION: '3.4'    
       Python35:
         PYTHON_VERSION: '3.5'
       Python36:
         PYTHON_VERSION: '3.6'    
+      PythonPYPY:
+        PYTHON_VERSION: 'pypy'  
+      PythonPYPY3:
+        PYTHON_VERSION: 'pypy3'          
   steps:
   - task: UsePythonVersion@0
     inputs:
